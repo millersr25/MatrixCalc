@@ -8,17 +8,17 @@ Matrix createMatrix(int rows, int cols) {
 
     Matrix matrix(rows, std::vector<double>(cols, 1.0));
     
-    // Print the matrix
-    std::cout << "Printing matrix" << std::endl;
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            std::cout << matrix[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
+    // // Print the matrix
+    // std::cout << "Printing matrix" << std::endl;
+    // for (int i = 0; i < rows; i++) {
+    //     for (int j = 0; j < cols; j++) {
+    //         std::cout << matrix[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
 
-    std::cout << "Matrix created successfully" << std::endl;
-    std::cout << std::endl;
+    // std::cout << "Matrix created successfully" << std::endl;
+    // std::cout << std::endl;
     return matrix;
 }
 
@@ -52,15 +52,15 @@ Matrix addMatrices(const Matrix &m1, const Matrix &m2) {
         }
     }
 
-    // Print the result matrix
-    std::cout << "Result matrix:" << std::endl;
-    for (std::size_t i = 0; i < result.size(); i++) {
-        for (std::size_t j = 0; j < result[0].size(); j++) {
-            std::cout << result[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
+    // // Print the result matrix
+    // std::cout << "Result matrix:" << std::endl;
+    // for (std::size_t i = 0; i < result.size(); i++) {
+    //     for (std::size_t j = 0; j < result[0].size(); j++) {
+    //         std::cout << result[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+    // std::cout << std::endl;
 
     return result;
 }
@@ -88,22 +88,22 @@ Matrix subtractMatrices(const Matrix &m1, const Matrix &m2) {
 
     Matrix result(m1Rows, std::vector<double>(m1Cols, 0.0));
 
-    // Add corresponding elements
+    // Subtract corresponding elements
     for (int i = 0; i < m1Rows; i++) {
         for (int j = 0; j < m1Cols; j++) {
             result[i][j] = m1[i][j] - m2[i][j];
         }
     }
 
-    // Print the result matrix
-    std::cout << "Result matrix:" << std::endl;
-    for (std::size_t i = 0; i < result.size(); i++) {
-        for (std::size_t j = 0; j < result[0].size(); j++) {
-            std::cout << result[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
+    // // Print the result matrix
+    // std::cout << "Result matrix:" << std::endl;
+    // for (std::size_t i = 0; i < result.size(); i++) {
+    //     for (std::size_t j = 0; j < result[0].size(); j++) {
+    //         std::cout << result[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+    // std::cout << std::endl;
 
     return result;
 }
