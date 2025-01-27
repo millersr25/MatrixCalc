@@ -27,43 +27,45 @@ TEST_CASE("Testing matrix creation with invalid dimensions", "[CreateMatrix][inv
 
 TEST_CASE("Testing matrix addition with valid dimensions", "[AddMatrices][valid]") {
     Matrix matrix1 = createMatrix(3, 3);
-    matrix1[0][0] = 1;
-    matrix1[0][1] = 1;
-    matrix1[0][2] = 1;
-    matrix1[1][0] = 1;
-    matrix1[1][1] = 1;
-    matrix1[1][2] = 1;
-    matrix1[2][0] = 1;
-    matrix1[2][1] = 1;
-    matrix1[2][2] = 1;
+    matrix1[0][0] = 2;
+    matrix1[0][1] = 2;
+    matrix1[0][2] = 2;
+    matrix1[1][0] = 2;
+    matrix1[1][1] = 2;
+    matrix1[1][2] = 2;
+    matrix1[2][0] = 2;
+    matrix1[2][1] = 2;
+    matrix1[2][2] = 2;
 
     Matrix matrix2 = createMatrix(3, 3);
-    matrix2[0][0] = 1;
-    matrix2[0][1] = 1;
-    matrix2[0][2] = 1;
-    matrix2[1][0] = 1;
-    matrix2[1][1] = 1;
-    matrix2[1][2] = 1;
-    matrix2[2][0] = 1;
-    matrix2[2][1] = 1;
-    matrix2[2][2] = 1;
+    matrix2[0][0] = 2;
+    matrix2[0][1] = 2;
+    matrix2[0][2] = 2;
+    matrix2[1][0] = 2;
+    matrix2[1][1] = 2;
+    matrix2[1][2] = 2;
+    matrix2[2][0] = 2;
+    matrix2[2][1] = 2;
+    matrix2[2][2] = 2;
     Matrix result = addMatrices(matrix1, matrix2);
     REQUIRE(result.size() == 3);
     REQUIRE(result[0].size() == 3);
 
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
-            REQUIRE(result[i][j] == 2);
+            REQUIRE(result[i][j] == 4);
         }
     }
 }
 
 TEST_CASE("Testing matrix addition with invalid dimensions", "[AddMatrices][invalid]") {
+    // Test mismatched dimensions
     Matrix matrix1 = createMatrix(3, 3);
     Matrix matrix2 = createMatrix(1, 3);
     REQUIRE_THROWS(addMatrices(matrix1, matrix2));
-
-    Matrix matrix3 = createMatrix(3, 0);
-    Matrix matrix4 = createMatrix(0, 4);
+    
+    // Test different column counts
+    Matrix matrix3 = createMatrix(2, 3);
+    Matrix matrix4 = createMatrix(2, 4);
     REQUIRE_THROWS(addMatrices(matrix3, matrix4));
 }

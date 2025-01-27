@@ -6,7 +6,7 @@ Matrix createMatrix(int rows, int cols) {
         throw std::invalid_argument("Rows and columns must be positive integers and greater than 0");
     }
 
-    Matrix matrix(rows, std::vector<double>(cols, 0.0));
+    Matrix matrix(rows, std::vector<double>(cols, 1.0));
     
     // Print the matrix
     std::cout << "Printing matrix" << std::endl;
@@ -53,8 +53,8 @@ Matrix addMatrices(const Matrix &m1, const Matrix &m2) {
 
     // Print the result matrix
     std::cout << "Result matrix:" << std::endl;
-    for (int i = 0; i < result.size(); i++) {
-        for (int j = 0; j < result[0].size(); j++) {
+    for (std::size_t i = 0; i < result.size(); i++) {
+        for (std::size_t j = 0; j < result[0].size(); j++) {
             std::cout << result[i][j] << " ";
         }
         std::cout << std::endl;
