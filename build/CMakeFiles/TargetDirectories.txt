@@ -1,0 +1,5 @@
+/home/millersam/MatrixCalc/build/CMakeFiles/matrixCalc.dir
+/home/millersam/MatrixCalc/build/CMakeFiles/matrixCalcTest.dir
+/home/millersam/MatrixCalc/build/CMakeFiles/test.dir
+/home/millersam/MatrixCalc/build/CMakeFiles/edit_cache.dir
+/home/millersam/MatrixCalc/build/CMakeFiles/rebuild_cache.dir

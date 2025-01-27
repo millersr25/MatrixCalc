@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/matrixCalc.dir/src/main.cpp.o CMakeFiles/matrixCalc.dir/src/matrix.cpp.o -o matrixCalc 
