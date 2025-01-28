@@ -19,6 +19,7 @@ Matrix createMatrix(int rows, int cols) {
 
     // std::cout << "Matrix created successfully" << std::endl;
     // std::cout << std::endl;
+    
     return matrix;
 }
 
@@ -140,15 +141,15 @@ Matrix multiplyMatrices(const Matrix &m1, const Matrix &m2) {
         }
     }
 
-    // Print the result matrix
-    std::cout << "Result matrix:" << std::endl;
-    for (std::size_t i = 0; i < result.size(); i++) {
-        for (std::size_t j = 0; j < result[0].size(); j++) {
-            std::cout << result[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
+    // // Print the result matrix
+    // std::cout << "Result matrix:" << std::endl;
+    // for (std::size_t i = 0; i < result.size(); i++) {
+    //     for (std::size_t j = 0; j < result[0].size(); j++) {
+    //         std::cout << result[i][j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+    // std::cout << std::endl;
 
     return result;
 }
