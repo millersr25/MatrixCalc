@@ -29,5 +29,19 @@ int main() {
 
     Matrix matrix4 = subtractMatrices(matrix1, matrix2);
 
+    Matrix matrix6 = createMatrix(2, 2);
+    matrix6[0][0] = 1;
+    matrix6[0][1] = 2;
+    matrix6[1][0] = 3;
+    matrix6[1][1] = 4;
+
+    Matrix matrix7 = createMatrix(2, 2);
+    matrix7[0][0] = 5;
+    matrix7[0][1] = 6;
+    matrix7[1][0] = 7;
+    matrix7[1][1] = 8;
+
+    Matrix matrix8 = multiplyMatrices(matrix6, matrix7);    
+
     return 0;
 }

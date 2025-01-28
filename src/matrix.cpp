@@ -109,5 +109,46 @@ Matrix subtractMatrices(const Matrix &m1, const Matrix &m2) {
 }
 
 Matrix multiplyMatrices(const Matrix &m1, const Matrix &m2) {
-    return Matrix();
+    // Check if matrices are empty
+    if (m1.empty() || m2.empty()) {
+        throw std::invalid_argument("Matrices cannot be empty");
+    }
+
+    // Check if matrices have valid dimensions
+    if (m1[0].empty() || m2[0].empty()) {
+        throw std::invalid_argument("Matrices cannot have zero columns");
+    }
+
+    int m1Rows = m1.size();
+    int m1Cols = m1[0].size();
+    int m2Rows = m2.size();
+    int m2Cols = m2[0].size();
+
+    // Check if matrices have matching dimensions
+    if (m1Cols != m2Rows) {
+        throw std::invalid_argument("Matrices must have the same dimensions");
+    }
+
+    Matrix result(m1Rows, std::vector<double>(m2Cols, 0.0));
+
+    // Multiply matrices
+    for (int i = 0; i < m1Rows; i++) {
+        for (int j = 0; j < m2Cols; j++) {
+            for (int k = 0; k < m1Cols; k++) {
+                result[i][j] += m1[i][k] * m2[k][j];
+            }
+        }
+    }
+
+    // Print the result matrix
+    std::cout << "Result matrix:" << std::endl;
+    for (std::size_t i = 0; i < result.size(); i++) {
+        for (std::size_t j = 0; j < result[0].size(); j++) {
+            std::cout << result[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+
+    return result;
 }
