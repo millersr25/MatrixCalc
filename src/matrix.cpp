@@ -6,7 +6,7 @@ Matrix createMatrix(int rows, int cols) {
         throw std::invalid_argument("Rows and columns must be positive integers and greater than 0");
     }
 
-    Matrix matrix(rows, std::vector<double>(cols, 1.0));
+    Matrix matrix(rows, std::vector<double>(cols, 0.0));
     
     // // Print the matrix
     // std::cout << "Printing matrix" << std::endl;
@@ -19,7 +19,7 @@ Matrix createMatrix(int rows, int cols) {
 
     // std::cout << "Matrix created successfully" << std::endl;
     // std::cout << std::endl;
-    
+
     return matrix;
 }
 
